@@ -1,7 +1,12 @@
 import React from "react";
+import { useEffect } from "react";
 
 const ComponentsBlogList = (props) => {
-    const { blog, author } = props;
+    const { blog, author, handleDeleteBlog } = props;
+    const onDeleteBlog = (id, title) => {
+        handleDeleteBlog(id, title);
+    };
+
     return (
         <div className="home">
             <div className="blog-list">
